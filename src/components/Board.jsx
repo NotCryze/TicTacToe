@@ -20,7 +20,11 @@ export default function Board() {
     let status;
     if (winner) {
         status = winner + ' wins!'
-    } else {
+    }
+    else if(squares.every(square => square != null)) {
+        status = "It's a draw!"
+    } 
+    else {
         status = player + "'s turn"
     }
 
