@@ -1,0 +1,51 @@
+.square {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #999;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.board{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.square-1{
+    border-top: none;
+    border-left: none;
+}
+
+.square-2{
+    border-top: none;
+}
+
+.square-3{
+    border-top: none;
+    border-right: none;
+}
+
+.square-4{
+    border-left: none;
+}
+
+.square-6{
+    border-right: none;
+}
+
+.square-7{
+    border-bottom: none;
+    border-left: none;
+}
+
+.square-8{
+    border-bottom: none;
+}
+
+.square-9{
+    border-bottom: none;
+    border-right: none;
+}
