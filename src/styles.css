@@ -70,3 +70,13 @@
     background-color: #e74c3c;
     color:white;
 }
+
+.restart-button{
+    background-color: rgba(125, 249, 255, .8);
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    height:50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}

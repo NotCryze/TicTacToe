@@ -16,14 +16,19 @@ export default function Board() {
         setPlayer(player === 'X' ? 'O' : 'X')
     }
 
+    function handleRestart() {
+        setPlayer('X');
+        setSquares(Array(9).fill(null));
+    }
+
     const winner = calculateWinner(squares)
     let status;
     if (winner) {
         status = winner + ' wins!'
     }
-    else if(squares.every(square => square != null)) {
+    else if (squares.every(square => square != null)) {
         status = "It's a draw!"
-    } 
+    }
     else {
         status = player + "'s turn"
     }
@@ -31,6 +36,7 @@ export default function Board() {
     return (
         <div className='board'>
             <div className='status'>{status}</div>
+            <div className='mb-3'><button className={`restart-button ${winner || squares.every(square => square != null) ? 'pulse-info' : ""}`} onClick={handleRestart}>RESTART</button></div>
             <div className='row'>
                 <Square value={squares[0]} onSquareClick={() => handleClick(0)} nr="1" />
                 <Square value={squares[1]} onSquareClick={() => handleClick(1)} nr="2" />
