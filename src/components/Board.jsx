@@ -34,26 +34,30 @@ export default function Board() {
     }
 
     return (
-        <div className='board'>
-            <div className='status'>{status}</div>
-            <div className='mb-3'><button className={`restart-button ${winner || squares.every(square => square != null) ? 'pulse-info' : ""}`} onClick={handleRestart}>RESTART</button></div>
-            <div className='row'>
-                <Square value={squares[0]} onSquareClick={() => handleClick(0)} nr="1" />
-                <Square value={squares[1]} onSquareClick={() => handleClick(1)} nr="2" />
-                <Square value={squares[2]} onSquareClick={() => handleClick(2)} nr="3" />
+        <div className='game'>
+            <h1 className='text-center fw-bold mb-3'>Tic Tac Toe</h1>
+            <div className='d-flex flex-column align-items-center'>
+                <div className='status'>{status}</div>
+                <button className={`restart-button ${winner || squares.every(square => square != null) ? 'pulse-info' : ""}`} onClick={handleRestart}>RESTART</button>
             </div>
-
-            <div className='row'>
-                <Square value={squares[3]} onSquareClick={() => handleClick(3)} nr="4" />
-                <Square value={squares[4]} onSquareClick={() => handleClick(4)} nr="5" />
-                <Square value={squares[5]} onSquareClick={() => handleClick(5)} nr="6" />
+            <div className='board'>
+                <div className='row'>
+                    <Square value={squares[0]} onSquareClick={() => handleClick(0)} nr="1" />
+                    <Square value={squares[1]} onSquareClick={() => handleClick(1)} nr="2" />
+                    <Square value={squares[2]} onSquareClick={() => handleClick(2)} nr="3" />
+                </div>
+                <div className='row'>
+                    <Square value={squares[3]} onSquareClick={() => handleClick(3)} nr="4" />
+                    <Square value={squares[4]} onSquareClick={() => handleClick(4)} nr="5" />
+                    <Square value={squares[5]} onSquareClick={() => handleClick(5)} nr="6" />
+                </div>
+                <div className='row mb-5'>
+                    <Square value={squares[6]} onSquareClick={() => handleClick(6)} nr="7" />
+                    <Square value={squares[7]} onSquareClick={() => handleClick(7)} nr="8" />
+                    <Square value={squares[8]} onSquareClick={() => handleClick(8)} nr="9" />
+                </div>
             </div>
-
-            <div className='row'>
-                <Square value={squares[6]} onSquareClick={() => handleClick(6)} nr="7" />
-                <Square value={squares[7]} onSquareClick={() => handleClick(7)} nr="8" />
-                <Square value={squares[8]} onSquareClick={() => handleClick(8)} nr="9" />
-            </div>
+            <div className='footer'>&copy; cryze.dev - 2023</div>
         </div>
     )
 }
