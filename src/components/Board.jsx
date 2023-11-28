@@ -33,13 +33,9 @@ export default function Board({ player, squares, onPlay, onRestart, onUndo }) {
         <div className='board'>
             <div className='d-flex flex-column align-items-center mb-5'>
                 <div className='status'>{status}</div>
-                <button className={`restart-button ${winner || squares.every(square => square != null) ? 'pulse-info' : ""}`} onClick={handleRestart}>RESTART</button>
-            </div>
-            <div className='board'>
-                <div className='row'>
-                    <Square value={squares[0]} onSquareClick={() => handleClick(0)} nr="1" />
-                    <Square value={squares[1]} onSquareClick={() => handleClick(1)} nr="2" />
-                    <Square value={squares[2]} onSquareClick={() => handleClick(2)} nr="3" />
+                <div>
+                    <button className={`restart-button me-3 ${winner || squares.every(square => square != null) ? 'pulse-info' : ""}`} onClick={onRestart}>RESTART</button>
+                    <button className='revert-button' onClick={onUndo}><FontAwesomeIcon icon={faArrowRotateLeft} /></button>
                 </div>
             </div>
             <div className='playing-field'>
