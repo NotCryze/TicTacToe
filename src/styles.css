@@ -8,17 +8,24 @@
 }
 
 .game {
+    height: 100vh;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-evenly;
     align-items: center;
-    height: 100vh;
 }
 
-.board{
+.playing-field {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    align-items: center;
+}
+
+.board {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -83,13 +90,31 @@
     background-color: rgba(125, 249, 255, .8);
     border: none;
     border-radius: 5px;
-    width: 200px;
+    width: 150px;
     height: 50px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
 }
 
-.footer{
+.revert-button {
+    background-color: rgba(125, 249, 255, .8);
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.colormode-button{
+    background-color: rgba(125, 249, 255, .8);
+    border: none;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.footer {
     justify-content: flex-end;
     align-items: flex-end;
 }
